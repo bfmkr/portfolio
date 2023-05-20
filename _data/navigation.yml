@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: SQL Demo
+  link: /SQL%20Demo.html
+- name: Spreadsheet Demo
+  link: /Spreadsheet%20Demo.html
+- name: Tableau Demo 1
+  link: /Tableau%20Demo%201.html
+- name: Tableau Demo 2
+  link: /Tableau%20Demo%202.html
+- name: Tableau Demo 3
+  link: /Tableau%20Demo%203.html
