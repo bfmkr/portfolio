@@ -3,6 +3,6 @@ layout: default
 title: Spreadsheet Demo
 ---
 
-# Title 
+# Spreadsheet Demo 
 
 content

@@ -3,6 +3,6 @@ layout: default
 title: SQL Demo
 ---
 
-# Title
+# SQL Demo
 
 content

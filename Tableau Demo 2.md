@@ -3,6 +3,6 @@ layout: default
 title: Tableau Demo 2
 ---
 
-# Title
+# Tableau Demo 2
 
 content
