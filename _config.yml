@@ -1,2 +1,10 @@
-url: "https://bfmkr.github.io"
+title: Portfolio
+email: ben@bmkrresume.com
+description: >
+  A simple website hosted with GitHub pages using Jekyll to demonstrate
+  experience with various data analysis tools.
 baseurl: "/portfolio/"
+url: "https://bfmkr.github.io"
+github_username: bfmkr
+sass:
+  sass_dir: _sass
