@@ -4,22 +4,58 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    // border: 1px solid #ddd;
+    outline: 1300px solid #fff;
+    margin: 8px auto;
+    padding: 0px;
+    max-width: 980px;
+}
+
+
+.homepage {
     text-align: center;
 }
 
+
+
 h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
     padding-top: 2em;
+    text-align: center;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
 
 p {
     margin: 2em 0;
 }
 
 img {
+    border: 0;
+    display: block;
     width: 40em;
     max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img + em {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .current {
@@ -28,4 +64,37 @@ img {
 
 nav {
     text-align: center;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+blockquote {      // for blockquote lines with >
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+pre {     // for fenced code blocks triple backtick
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
 }
