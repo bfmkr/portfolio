@@ -7,8 +7,10 @@ body {
     // border: 1px solid #ddd;
     outline: 1300px solid #fff;
     margin: 8px auto;
-    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 980px;
+    line-height: 1.6;
 }
 
 
@@ -31,6 +33,7 @@ h3,
 h4,
 h5,
 h6 {
+  padding-top: 1.5em;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.1;
@@ -38,7 +41,7 @@ h6 {
 
 
 p {
-    margin: 2em 0;
+    margin-top: 16px;
 }
 
 img {
@@ -90,7 +93,25 @@ blockquote {      // for blockquote lines with >
   border-left: 4px solid #ddd;
 }
 
-pre {     // for fenced code blocks triple backtick
+code,
+samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+code:before,
+code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+
+pre {     // for fenced code blocks (triple backtick)
   padding: 16px;
   overflow: auto;
   font-size: 85%;
