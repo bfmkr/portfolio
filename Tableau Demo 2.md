@@ -9,7 +9,7 @@ title: Tableau Demo 2
 &nbsp;
 
 Here is an example Tableau Dashboard which can be downloaded from my [Tableau Public profile](https://public.tableau.com/views/VideoGameSalesdashboards/PlaystationOverview1994-2010?:language=en-GB&:display_count=n&:origin=viz_share_link).
-Clicking the full screen button on the dashboard (icon at the bottom right of Fig. 1) is recommended!
+Clicking the full screen button on the dashboard (icon at the bottom right of Fig. 1) is recommended.
 
 ## Playstation Video Game Sales from 1994-2010 
 
@@ -46,9 +46,8 @@ By using this in combination with the **Publisher** drop-down menu, we can quick
 </object>
 </div>
 <figcaption style="text-align:center; font-style: italic;"> 
-    Fig. 1 Playstation video game sales dashboard 
+    Fig. 1 Playstation video game sales dashboard, Data Source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales"> kaggle</a>
 </figcaption>
-
 
 <script type='text/javascript'>
 var divElement = document.getElementById('viz1684839151419');
