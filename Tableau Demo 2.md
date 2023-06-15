@@ -11,10 +11,10 @@ title: Tableau Demo 2
 Here is an example Tableau Dashboard which can be downloaded from my [Tableau Public profile](https://public.tableau.com/views/VideoGameSalesdashboards/PlaystationOverview1994-2010?:language=en-GB&:display_count=n&:origin=viz_share_link).
 Clicking the full screen button on the dashboard (icon at the bottom right of Fig. 1) is recommended.
 
+
 ## Playstation Video Game Sales from 1994-2010 
 
-Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on Sony Products (Playstation 1,2,3 and Playstation Portable). 
-
+Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on products by Sony (Playstation 1,2,3 and Playstation Portable). 
 
 Creating dashboards like this is really useful for interacting with and investigating data.
 For example, in this case I have designed it so the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
