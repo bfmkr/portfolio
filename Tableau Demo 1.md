@@ -7,60 +7,55 @@ title: Tableau Demo 1
 
 &nbsp;
 
-This demo uses Tableau to investigate the mean years spent in school among the G20 countries.
-I answer the questions:
-
-* Is the number of years spent in school always increasing, or has it declined for some nations? 
-  Has growth plateaued?
-* Which countries have had the greatest shift towards equality between men and women?
+Here is an example Tableau Dashboard which can be downloaded from my [Tableau Public profile](https://public.tableau.com/views/VideoGameSalesdashboards/PlaystationOverview1994-2010?:language=en-GB&:display_count=n&:origin=viz_share_link).
+Clicking the full screen button on the dashboard (icon at the bottom right of Fig. 1) is recommended.
 
 
-## The mean years spent in school dataset
+## Playstation Video Game Sales from 1994-2010 
 
-The `mean_years_school.csv` dataset in Fig. 1 shows the average number of years men and women stay in school for different age brackets for 187 countries from 1970 until 2015.
+Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on products by Sony (Playstation 1,2,3 and Playstation Portable). 
 
-![mean-years-school](/assets/images/mean_years_school.png)
-*Fig.1 Mean years spent in school dataset (source:  <https://www.gapminder.org/data>)*
+Creating dashboards like this is really useful for interacting with and investigating data.
+For example, in this case I have designed it so the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
+By using this in combination with the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. 
 
-## Average for the 25-34 age bracket for G20 countries
+* To do this, filter for "Electronic Arts" in the Publisher drop-down, click on the "PS2" vertical bar in the Sales by Platform chart, and click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
+  After doing so, the Top Video Games bar horizontal bar chart will show "The Sims" in the top spot, and hovering over it shows the sales information in the pop-up.
 
-By focussing on a specific age bracket we can get a good idea to the answers of our questions. 
-This is a sensible choice because we don't know the relative populations for the different age brackets.
-<!-- The most relevant age bracket to check is the 25 - 34 age group.  -->
-Consider the average across all years of available data, Fig. 2.
+<div class='tableauPlaceholder' id='viz1684839151419' style='position: relative; border: 1px solid #ddd'>
+<noscript>
+<a href='#'>
+<img alt='Playstation Overview 1994-2010 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VideoGameSalesdashboards&#47;PlaystationOverview1994-2010&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz'  style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+<param name='embed_code_version' value='3' />
+<param name='site_root' value='' />
+<param name='name' value='VideoGameSalesdashboards&#47;PlaystationOverview1994-2010' />
+<param name='tabs' value='no' />
+<param name='toolbar' value='yes' />
+<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VideoGameSalesdashboards&#47;PlaystationOverview1994-2010&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+<param name='language' value='en-GB' />
+</object>
+</div>
+<figcaption style="text-align:center; font-style: italic;"> 
+    Fig. 1 Playstation video game sales dashboard, Data Source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales"> kaggle</a>
+</figcaption>
 
-![g20-average-25-34](/assets/images/g20-countries-average.png)
-*Fig. 2 Investigating the 25-34 age bracket among G20 countries. Across all available data, the USA has the largest average number of years spent in school at 13.40 years, and Australia places 5th with 11.51 years.*
+<script type='text/javascript'>
+var divElement = document.getElementById('viz1684839151419');
+var vizElement = divElement.getElementsByTagName('object')[0];
+if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
+else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
+else { vizElement.style.width='100%';vizElement.style.height='1477px';}
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
 
-* To narrow it down to the 19 countries of interest, I applied a filter to the `Country` field.
-* To get an estimate for the average, I created a calculated field: `[25-34] = ([Men 25-34] + [Women 25-34]) /2`  
-  It is important to note that this isn't a weighted average.
-  To make the calculation more accurate, we would need each country's population data for each gender and age group in the data set by year.
-  We could then alter the calculated field's formula to have weighted proportions.
-
-On first glance of Fig. 2, it appears the USA has the largest average years spent in school.
-It turns out, however, that this is due to an early lead, and that the USA is the *only* country which shows an extended plateau in the dataset. 
- This occurs in the 1990s, during which Canada and then later Japan overtakes the US for 1st and 2nd place respectively, Fig. 3. 
-
-![usa-plateau](assets/images/usa-plateau.png)
-*Fig. 3 In 1993, Canada overtook the USA for top spot for the mean number of years spent in school in the 25-34 age group. All countries follow a roughly linear growth apart from the USA which has a plateau for a span of ~10 years starting around 1990* 
-
-Fig. 3 answers our first question: **the average number of years spent in school is generally increasing for the G20 countries, and progress has only stalled in one country -- in the USA -- during a 10 year period in the 1990s, after which it began to increase again.**
-
-
-TODO: make this prettier. Center the title, make text larger, make clickable to Tableau public.
-
-### Rolling averages
-
-To see how the average years spent in school has evolved over time to reach the values in Fig. 2, we can also check the rolling average.
-This is a useful technique in general for investigating trends in time series data.
-
-* Plot Avg 25-34 versus year for each country. -- just do top 5 countries.
-* Also plot cumulative average, and the 5 year rolling average.
-
-
-## Investigating differences between genders over time
-
-> Which countries have the largest and smallest ratio of men:women across all years?
-
-To get an idea about equality between men and women we can investigate the ratio, and similarly look at the rolling averages.
