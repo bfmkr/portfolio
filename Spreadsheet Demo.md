@@ -298,19 +298,19 @@ This is calculated using the inbuilt function `STDEV()`.
 For computing the **semideviation**, used for the measure of spread in the Sortino ratio, we instead have to calculate
 
 \\[
-\sigma^{\*} = \sqrt{\frac{\sum_{i=1}^{L} (R_{i}^{\*} -R_{\text{av}})^{2}}{L}}
+\sigma_{\text{smd}} = \sqrt{\frac{\sum_{i=1}^{L} (R_{i}^{\*} -R_{\text{av}})^{2}}{L}}
 \\]
 
 where \\( \\{ R_{1}^{\*},R_{2}^{\*},\dots,R_{L}^{\*} \\}\\) is the subset of \\( L \\) historical returns which are less than the average value: \\(R_{i}^{*} < R_{\text{av}}\\). 
 <!-- In this case no such inbuilt function such as `STDEV()` is available.  -->
-In this case a new column of data for \\( (R_{i}^{\*} -R_{\text{av}})^{2}\\) was created, and then \\(\sigma^{\*}\\) was calculated using `=SQRT(SUMIFS(cell_range1,cell_range,"<"&ABC_R_av)/COUNTIFS(cell_range,"<"&ABC_R_av))`. 
+In this case a new column of data for \\( (R_{i}^{\*} -R_{\text{av}})^{2}\\) was created, and then \\(\sigma_{\text{smd}}\\) was calculated using `=SQRT(SUMIFS(cell_range1,cell_range,"<"&ABC_R_av)/COUNTIFS(cell_range,"<"&ABC_R_av))`. 
 Here `cell_range1` is the new column of data, `cell_range` is the series of monthly historical returns, and `ABC_R_av` is the named range for the cell containing \\(R_{\text{av}}\\).
 
 
 ## Acknowledgements
 
-Thanks to Dr David Ardia for the DataCamp class [Financial Analytics in Spreadsheets](https://www.datacamp.com/courses/financial-analytics-in-spreadsheets), from which the stock ABC price data was derived.
-All analysis and any errors are my own.
+Thanks to Dr David Ardia for the DataCamp class [Financial Analytics in Spreadsheets](https://www.datacamp.com/courses/financial-analytics-in-spreadsheets), from which the stock ABC price data seen in *Table 1* was taken.
+All data analysis and any errors are my own work.
 
 
 <script>
