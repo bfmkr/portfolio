@@ -27,7 +27,7 @@ The raw data consisted of a series of historical prices and dividends for the st
     ![raw-data](assets/images/spreadsheet-demo-raw-data.jpg)
 </span>
 <figcaption style="text-align:center; font-style:italic;"> 
-    Table 1 Sample of the raw data, from the "Main" tab of the workbook 
+    Table 1 Sample of the raw data, from the "Main" tab of the workbook. 
 </figcaption>
 
 ## Breakdown of results
@@ -46,7 +46,7 @@ There is an upward trend from the lowest price, $43.63, recorded on 2015-08-31, 
 
 *Fig. 3* displays a bar chart of the % monthly returns grouped by month. 
 Plotting this gives us a quick way to see if there was any particular time of year that the stock did particularly well (or poorly).
-To generate this plot the **% monthly returns** were computed in a standard way (described below), and the built-in function `COUNTIFS()` and `MONTH()` were used to find the total positive and negative returns from the 3 years of data.
+To generate this plot the **% monthly returns** were computed in a standard way (described below), and the built-in functions `COUNTIFS()` and `MONTH()` were used to find the total positive and negative returns from the 3 years of data.
 
 <div style="text-align: center;">
 <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=499677409&amp;format=interactive"></iframe>
@@ -92,7 +92,7 @@ At the end of 2017, the final wealth is $110.05 for ABC and $96.71 for the bench
      After that, ABC went above the average performance of the stock market as a whole. <br>
 </figcaption>
 
-Finally the **average rate of return** \\( R_{\text{av}}\\) is simply the arithmetic mean of the series of historical returns, computed in the spreadsheet simply using `AVERAGE()`.
+Finally, the **average rate of return** \\( R_{\text{av}}\\) is simply the arithmetic mean of the series of historical returns and is computed in the spreadsheet simply using `AVERAGE()`.
 It therefore considers all returns to be independent, and, loosely speaking, can be used to infer the expected reward for future performance.
 
 For the stock ABC, the two important reward metrics described above were found to be 
@@ -108,7 +108,7 @@ while the benchmark had \\(R_{E} = -0.06\%\\) and naturally contains zero cash f
 ### Risk metrics
 
 The **volatility**  of stock returns captures the amplitude (or spread) of the price variations. 
-A simple measure of this is the sample standard deviation of the series of historical returns \( \sigma \) 
+A simple measure of this is the sample standard deviation \\( \sigma \\) of the series of historical returns. 
 The higher the volatility, the large the amplitude of the past returns, and the riskier the stock.
 For stock ABC the result is
 
@@ -121,9 +121,9 @@ and is calculated with the function `STDEV()` in the spreadsheet.
 Another popular indicator to quantify risk is the historical **value-at-risk** (VaR).
 The 5% VaR is the value below which 5% of returns were observed, illustrated in *Fig. 5*.
 It is conveniently calculated with an in-built spreadsheet function: `=PERCENTILE(cell_range,0.05)`, where `cell_range` is the series of returns.
-For stock ABC the result is
+The result is
 
-\\[ \text{5% VaR for ABC} = -6.85\%\\]
+\\[ \text{5% VaR for ABC} = -6.85\%,\\]
 
 which indicates there is a 5% chance of losing more than 6.85% per month.
 
@@ -202,7 +202,7 @@ The Gaussian model's 5% VaR is possible to calculate using the `NORMINV()` sprea
 </div>
 
 Since this is less than the 5% historical VaR of stock ABC (which was -6.85%), the model is more conservative than the empirical data.
-If a lower level was picked, say 0.01 instead of 0.05, then the model would become less conservative, bexause the tails of the Gaussian model are typically thinner than empirical data.
+If a lower level was picked, say 0.01 instead of 0.05, then the model would become less conservative, because the tails of a Gaussian model are typically thinner than empirical data.
 
 We can also measure the skewed-ness and tailed-ness of the empirical data to compare it to the Gaussian model, using `SKEW()` and `KURT()`:
 
@@ -214,7 +214,7 @@ We can also measure the skewed-ness and tailed-ness of the empirical data to com
 </div>
 
 A negative skewness and a positive excess kurtosis confirm that the distribution of returns is slightly left-skewed, and that extreme returns are more present in the dataset than under the Gaussian model. 
-This is as expected, as empirical data for financial returns sometimes exhibit very large returns and have a tendency to be left-skewed.
+This is to be expected, because empirical data for financial returns sometimes exhibit very large returns and have a tendency to be left-skewed.
 
 
 ### More benchmarking
@@ -224,7 +224,7 @@ Beyond simply comparing the cumulative wealth of stock ABC to the benchmark, sho
 
 In particular, a **drawdown analysis** is useful to assess how dangerous a stock is, which shows the peak-to-trough decline of the value of the investment over time, *Fig. 7*.
 The drawdown at a given date is defined as the current price divided by the historical maximum so far, minus one.
-Competitors with similar cumulative wealth performance can therefore also be distinguished by their maximum drawdown, usually quoted as a positive %.
+Competitors with similar cumulative wealth performance can be distinguished by their maximum drawdown, usually quoted as a positive %.
 
 <div style="text-align: center;">
     <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=881907583&amp;format=interactive"></iframe>
@@ -257,7 +257,7 @@ Using all of the available data, we find
 which indicates the assets are moderately correlated.
 
 Correlation typically increases during crisis periods, during which people tend to sell the assets they own, leading to excess supply compared to the demand for the assets, and a generalized decline of prices. 
-This can be investigated with a rolling window analysis the correlation coefficient, *Fig. 8*.
+This can be investigated with a rolling window analysis of the correlation coefficient, *Fig. 8*.
 In this case, it shows us that the correlation is unstable.
 
 <div style="text-align: center;">
