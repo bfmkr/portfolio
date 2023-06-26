@@ -28,7 +28,7 @@ To answer our question we only need a subset of the 7 tables.
 The relations between the relevant tables we will use and their column names are show in *Fig. 2*.
 
 <div>
-<img src="{{ "assets/images/soccer-tables.png" | prepend: site.baseurl }}" alt="EU-soccer-db-details" style="border: 1px solid #ddd">
+<img src="{{ "/assets/images/soccer-tables.png" | prepend: site.baseurl }}" alt="details-of-tables" style="border: 1px solid #ddd">
 <figcaption style="text-align: center; font-style:italic; margin-top:2px;">
     Fig. 2 Details of columns in the "match" and "team" tables, after some considerable pruning of the dataset.  TODO: fix!
 </figcaption>
