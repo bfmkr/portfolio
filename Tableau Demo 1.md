@@ -16,11 +16,11 @@ Clicking the full screen button on the dashboard (icon at the bottom right of Fi
 Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on products by Sony (Playstation 1,2,3 and Playstation Portable). 
 
 Creating dashboards like this is really useful for interacting with and investigating data.
-For example, in this case I have designed it so the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
+For example, I have designed this dashboard such that the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
 By using this in combination with the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. 
 
 * To do this, filter for "Electronic Arts" in the Publisher drop-down, click on the "PS2" vertical bar in the Sales by Platform chart, and click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
-  After doing so, the Top Video Games bar horizontal bar chart will show "The Sims" in the top spot, and hovering over it shows the sales information in the pop-up.
+  After doing so, the Top Video Games horizontal bar chart will show "The Sims" in the top spot, and hovering over it shows the sales information in the pop-up.
 
 <div class='tableauPlaceholder' id='viz1684839151419' style='position: relative; border: 1px solid #ddd'>
 <noscript>
