@@ -1,6 +1,6 @@
 ---
-layout: default-wide
-title: Spreadsheet Demo
+    layout: default-wide
+    title: Spreadsheet Demo
 ---
 
 # Spreadsheet Demo 
@@ -45,8 +45,8 @@ There is an upward trend from the lowest price, $43.63, recorded on 2015-08-31, 
 </figcaption>
 
 *Fig. 3* displays a bar chart of the % monthly returns grouped by month. 
-Plotting this gives us a quick way to see if there was any particular time of year that the stock did particularly well (or poorly).
-To generate this plot the **% monthly returns** were computed in a standard way (described below), and the built-in functions `COUNTIFS()` and `MONTH()` were used to find the total positive and negative returns from the 3 years of data.
+Plotting this gives us a quick way to see if there was any particular time of year that the stock did particularly well or poorly.
+To generate this plot the **% monthly returns** were computed in a standard way (described in the next paragraph), and the built-in functions `COUNTIFS()` and `MONTH()` were used to find the total positive and negative returns from the 3 years of data.
 
 <div style="text-align: center;">
 <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=499677409&amp;format=interactive"></iframe>
@@ -92,14 +92,14 @@ At the end of 2017, the final wealth is $110.05 for ABC and $96.71 for the bench
      After that, ABC went above the average performance of the stock market as a whole. <br>
 </figcaption>
 
-Finally, the **average rate of return** \\( R_{\text{av}}\\) is simply the arithmetic mean of the series of historical returns and is computed in the spreadsheet simply using `AVERAGE()`.
+Finally, the **average rate of return** \\( R_{\text{av}}\\) is simply the arithmetic mean of the series of historical returns and is computed in the spreadsheet with `AVERAGE()`.
 It therefore considers all returns to be independent, and, loosely speaking, can be used to infer the expected reward for future performance.
 
 For the stock ABC, the two important reward metrics described above were found to be 
 
 \begin{align}
 R_{E} & = 0.16\% \\\ 
-R_{\text{av}} &= 0.28\%
+R_{\text{av}} &= 0.28\%,
 \end{align}
 
 while the benchmark had \\(R_{E} = -0.06\%\\) and naturally contains zero cash flow contributions in its calculation.
@@ -120,7 +120,7 @@ and is calculated with the function `STDEV()` in the spreadsheet.
 
 Another popular indicator to quantify risk is the historical **value-at-risk** (VaR).
 The 5% VaR is the value below which 5% of returns were observed, illustrated in *Fig. 5*.
-It is conveniently calculated with an in-built spreadsheet function: `=PERCENTILE(cell_range,0.05)`, where `cell_range` is the series of returns.
+It is conveniently calculated with an in-built spreadsheet function: `=PERCENTILE(cell_range,0.05)`, where `cell_range` contains the series of returns.
 The result is
 
 \\[ \text{5% VaR for ABC} = -6.85\%,\\]
@@ -309,7 +309,7 @@ Here `cell_range1` is the new column of data, `cell_range` is the series of mont
 
 ## Acknowledgements
 
-Thanks to Dr David Ardia for the DataCamp class [Financial Analytics in Spreadsheets](https://www.datacamp.com/courses/financial-analytics-in-spreadsheets), from which the stock ABC price data seen in *Table 1* was taken.
+Thanks to Dr David Ardia for the DataCamp class [Financial Analytics in Spreadsheets](https://www.datacamp.com/courses/financial-analytics-in-spreadsheets), from which the fictional stock ABC data seen in *Table 1* was taken.
 All data analysis and any errors are my own work.
 
 
