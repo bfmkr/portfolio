@@ -7,7 +7,7 @@
 
 &nbsp;
 
-In this demo I answer the question "Who defeated Manchester United in the 2014/2015 season?" using SQL and the [European Soccer Database](https://www.kaggle.com/datasets/hugomathien/soccer?resource=download).
+In this demo I answer the question "Who defeated Manchester United in the 2014/2015 season?" using SQL and the [European Soccer Database](https://www.kaggle.com/datasets/hugomathien/soccer).
 Click to [skip to the results](#results).
 
 
@@ -19,7 +19,7 @@ The data spans 11 European countries with their lead championships from seasons 
 <div>
 <img src="{{ "/assets/images/EU-soccer-db-details.jpg" | prepend: site.baseurl }}" alt="EU-soccer-db-details" style="border: 1px solid #ddd">
 <figcaption style="text-align:center; font-style:italic; margin-top:2px;">
-    Fig. 1 Details of the database we will investigate. Data source: <a href="https://www.kaggle.com/datasets/hugomathien/soccer?resource=download" title="">kaggle</a>
+    Fig. 1 Details of the database we will investigate (source: <a href="https://www.kaggle.com/datasets/hugomathien/soccer" title="">kaggle.com</a>)
 </figcaption>  
 </div>
 
