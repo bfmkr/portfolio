@@ -1,6 +1,6 @@
 ---
-layout: default
-title: SQL Demo
+    layout: default
+    title: SQL Demo
 ---
 
 # SQL Demo
@@ -70,15 +70,17 @@ LIMIT 3;
 We will need to scan through every match played by Manchester United in the `Match` table, identify who they were playing against, limit it to the `2014/2015` season, and further narrow it down to just the games where they lost.
 
 Since some of the time they will be the home team, and some of the time the away team, we will actually need to scan through the `Match` table twice.
-In a first attempt, it will be useful to obtain the `team_api_id` for Manchester United in order to hardcode this into future queries:
+In a first step, it will be useful to obtain the `team_api_id` and `team_short_name` for Manchester United in order to hardcode this into future queries:
 
 ```sql
-SELECT team_api_id AS MU_team_api_id FROM Team WHERE team_long_name = 'Manchester United';
+SELECT team_short_name, team_api_id AS MU_team_api_id 
+FROM Team 
+WHERE team_long_name = 'Manchester United';
 ```
 
-| MU_team_api_id |
-| -------------- |  
-| 10260          |
+| team_short_name | MU_team_api_id |
+|-----------------|----------------|
+| MUN             | 10260          |
 
 ### Home team games vs Away team games
 
@@ -151,20 +153,21 @@ A few notes:
 
 ## Putting it all together
 
-The most recent query above returns 38 records in total -- comprising all of the games played by MU in that Premier League season -- which is few enough that we could simply go through them and read off which teams defeated Manchester United.
+The most recent query above returns 38 records in total -- comprising all of the games played by MU in that Premier League season. 
+This is few enough that we could simply go through them and read off which teams defeated Manchester United.
 
-However, what if many more games were played per season? Or if we were instead interested in results across *every* season in the dataset?
+However, what if many more games were played per season? Or what if we were instead interested in results across *every* season in the dataset?
 In either case it would be unrealistic to read through every fixture. 
 We can add a `CASE` statement to the main query with a corresponding `WHERE` clause to list just the outcomes which were losses for Manchester United:
 
 
 ```sql
 WITH home AS (
-  SELECT m.id, t.team_long_name
+  SELECT m.id, t.team_long_name, t.team_short_name
   FROM Match AS m
   LEFT JOIN Team AS t ON m.home_team_api_id = t.team_api_id),
 away AS (
-  SELECT m.id, t.team_long_name
+  SELECT m.id, t.team_long_name, t.team_short_name
   FROM Match AS m
   LEFT JOIN Team AS t ON m.away_team_api_id = t.team_api_id)
 SELECT DISTINCT
@@ -174,15 +177,15 @@ SELECT DISTINCT
     m.home_team_goal,
     m.away_team_goal,
         CASE 
-          WHEN 
-            ((m.home_team_goal > m.away_team_goal AND home.team_long_name = 'Manchester United')
-            OR
-            (m.home_team_goal < m.away_team_goal AND away.team_long_name = 'Manchester United'))
+          WHEN (
+            (m.home_team_goal > m.away_team_goal AND home.team_short_name = 'MUN')
+            OR (m.home_team_goal < m.away_team_goal AND away.team_short_name = 'MUN')
+          )
           THEN 'MU Win'
-          WHEN 
-            ((m.home_team_goal < m.away_team_goal AND home.team_long_name = 'Manchester United')
-            OR
-            (m.home_team_goal > m.away_team_goal AND away.team_long_name = 'Manchester United'))
+          WHEN (
+            (m.home_team_goal < m.away_team_goal AND home.team_short_name = 'MUN')
+            OR (m.home_team_goal > m.away_team_goal AND away.team_short_name = 'MUN')
+          )
           THEN 'MU Loss' 
           ELSE 'Tie' 
         END AS outcome
