@@ -19,6 +19,7 @@ The full details are available to view and download [here](https://docs.google.c
 All figures in this demo are interactive versions of the graphs in the spreadsheet. 
 In other words, hovering your mouse cursor over the plots can display further information about the underlying data.
 
+
 ## The data
 
 The raw data consisted of a series of historical prices and dividends for the stock ABC, the US market index over the same period, and the list of dates, see *Table 1*.
