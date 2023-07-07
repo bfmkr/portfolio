@@ -14,7 +14,7 @@ I answer the questions:
   Has growth plateaued?
 1. Which countries have had the greatest shift towards equality between men and women?
 
-All figures in this demo are interactive/clickable and embedded from the workbook hosted on Tableau public, which is available to download [here]().
+All figures in this demo are interactive/clickable and embedded from the workbook hosted on Tableau public, which is available to download [here](https://public.tableau.com/app/profile/ben.mckeever/viz/MeanYearsinSchool/average).
 
 
 ## The mean years spent in school dataset
@@ -90,7 +90,7 @@ This is sensible because the amount of time people spend in formal education dec
       <param name='display_count' value='yes' />
       <param name='language' value='en-GB' />
     </object>
-  </div>  
+  </div>
 </div>
 <figcaption style="text-align:center; font-style:italic; margin-top: 20px; margin-bottom:20px">
     Fig. 1 Left: the years spent in school for the 25-34 age bracket for just the G20 countries. 
@@ -117,7 +117,7 @@ This occurs in the 1990s, during which Canada and then later Japan overtakes the
 
 <div style="
   width: 100%;
-  outline: solid 1px black;">
+  padding: 10px;">
   <div class='tableauPlaceholder' id='viz1688360651008' style='position: relative'>
     <noscript>
       <a href='#'>
@@ -140,7 +140,7 @@ This occurs in the 1990s, during which Canada and then later Japan overtakes the
       <param name='language' value='en-GB' />
       <param name='filter' value='publish=yes' />
     </object>
-  </div>                
+  </div>
 </div>
 
 <figcaption style="text-align:center;font-style:italic; margin-top: 20px; margin-bottom:20px">
@@ -157,15 +157,73 @@ In conclusion, yes, the average number of years spent in school is generally inc
 
 ## Part 2: Differences between genders over time
 
-In this part we we answer the second question.
-
-> Which countries have the largest and smallest ratio of men:women across all years?
-
-To get an idea about equality between men and women we can investigate the ratio, and similarly look at the rolling averages.
+In this part we answer the second question. 
+Just as in part 1, we can focus on the 25-34 years age bracket to get a good sense of the answers to our questions.
 
 
+### Ratio over time
+
+To get an idea about equality between men and women we could investigate either the difference or the ratio between men and women's mean years in school and similarly look at how this has changed over time.
+
+<div style="
+  width: 100%;
+  padding: 10px;">
+  <div class='tableauPlaceholder' id='viz1688704511539' style='position: relative'>
+    <noscript>
+      <a href='#'>
+        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MeanYearsinSchool&#47;Ratio&#47;1_rss.png' style='border: none' />
+      </a>
+    </noscript>
+    <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+      <param name='embed_code_version' value='3' /> 
+      <param name='site_root' value='' />
+      <param name='name' value='MeanYearsinSchool&#47;Ratio' />
+      <param name='tabs' value='yes' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MeanYearsinSchool&#47;Ratio&#47;1.png' /> 
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-GB' />
+      <param name='filter' value='publish=yes' />
+    </object>
+  </div>
+</div>
+
+<figcaption style="text-align:center;font-style:italic;margin-top:20px; margin-bottom:20px;">
+  Fig. 3 Investigating the ratio of men:women average years spent in school for the 25-34 age bracket. <br>
+  Countries show a general downward trend overall with a close to linear behaviour. 
+  A handful of countries even dip below 1 which indicates the average years spent in school for women is higher than men.
+</figcaption>
+
+Some notes:
+
+* To achieve *Fig. 3* a new calculated field `[Men:Women (25-34)] = [Men 25-34] / [Women 25-34]` was used.
+* If we wish to be able to better distinguish between the bottom grouping of countries, which are very close together, we can simply exclude the top 5 countries from this plot. 
+    In the figure embedded above this can be done interactively -- simply click on the country to remove in the legend on the right, and then click `exclude`.
 
 
+### Conclusion
+
+From *Fig. 3* we can immediately see that India and Saudi Arabia have had the most dramatic changes, with their ratios dropping by nearly 1 across all years of data.
+These countries also especially stand out from the others by their significantly larger negative gradients across the initial half of the data, from 1970 to around 1995.
+
+To be more specific, by comparing their absolute numbers side by side, we can further quantify that India has had the largest change out of the two:
+
+|                | India | Saudi Arabia | 
+|----------------|-------|--------------|
+| 1970           | 2.454 | 2.253        |
+| 2015           | 1.473 | 1.301        |
+| **Difference** | 0.981 | 0.952        |
+
+
+By 2015 Indian men have an average of 1.47 years of schooling for every year of schooling Indian women have, down from 2.45 years in 1970.
+It is notable, however, that India is still the furthest country away from equality, and that its negative gradient has become flatter over time which indicates a slowing of progress somewhat.
+
+In conclusion, we therefore can confidently answer the question with "India and Saudi Arabia stand out as having the greatest shifts towards equality between men and women, and India had the greatest shift overall"
 
 
 <script type='text/javascript'>
@@ -178,22 +236,33 @@ scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-<script type='text/javascript'>                    
-  var divElement = document.getElementById('viz1688093659513');                    
-  var vizElement = divElement.getElementsByTagName('object')[0];                    
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1688093659513');
+  var vizElement = divElement.getElementsByTagName('object')[0];
   vizElement.style.width='100%';
-  vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-  var scriptElement = document.createElement('script');                    
+  vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  var scriptElement = document.createElement('script');
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-<script type='text/javascript'>                    
-    var divElement = document.getElementById('viz1688360651008');                    
-    var vizElement = divElement.getElementsByTagName('object')[0];                    
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1688360651008');
+    var vizElement = divElement.getElementsByTagName('object')[0];
     vizElement.style.width='100%';
     vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
-    var scriptElement = document.createElement('script');                    
+    var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1688704511539');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  vizElement.style.width='100%';
+  vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
