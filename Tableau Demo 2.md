@@ -206,7 +206,7 @@ Some notes:
     In the figure embedded above this can be done interactively -- simply click on the country to remove in the legend on the right, and then click `exclude`.
 
 
-### Conclusion
+### Discussion
 
 From *Fig. 3* we can immediately see that India and Saudi Arabia have had the most dramatic changes, with their ratios dropping by nearly 1 across all years of data.
 These countries also especially stand out from the others by their significantly larger negative gradients across the initial half of the data, from 1970 to around 1995.
@@ -223,7 +223,9 @@ To be more specific, by comparing their absolute numbers side by side, we can fu
 By 2015 Indian men have an average of 1.47 years of schooling for every year of schooling Indian women have, down from 2.45 years in 1970.
 It is notable, however, that India is still the furthest country away from equality, and that its negative gradient has become flatter over time which indicates a slowing of progress somewhat.
 
-In conclusion, we therefore can confidently answer the question with "India and Saudi Arabia stand out as having the greatest shifts towards equality between men and women, and India had the greatest shift overall"
+### Conclusion
+
+In conclusion, we therefore can confidently answer the question with "India and Saudi Arabia stand out as having the greatest shifts towards equality between men and women, with the *fastest* initial shifts towards equality, while out of the two India had the greatest absolute shift overall"
 
 
 <script type='text/javascript'>
