@@ -7,13 +7,12 @@
 
 &nbsp;
 
-Here is an example Tableau Dashboard which can be downloaded from my [Tableau Public profile](https://public.tableau.com/views/VideoGameSalesdashboards/PlaystationOverview1994-2010?:language=en-GB&:display_count=n&:origin=viz_share_link).
-Clicking the full screen button on the dashboard (icon at the bottom right of Fig. 1) is recommended for devices with smaller displays.
+This demo contains an example Tableau Dashboard displaying video game sales which can be downloaded from Tableau [here](https://public.tableau.com/views/VideoGameSalesdashboards/PlaystationOverview1994-2010?:language=en-GB&:display_count=n&:origin=viz_share_link).
 
 
 ## Playstation Video Game Sales from 1994-2010 
 
-Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on products by Sony (Playstation 1,2,3 and Playstation Portable). 
+*Fig. 1* shows an example interactive dashboard for Video Game Sales from 1994 - 2010 made in Tableau, focussing on products by Sony (Playstation 1,2,3 and Playstation Portable). 
 
 
 <div class='tableauPlaceholder' id='viz1684839151419' style='position: relative; border: 1px solid #ddd'>
@@ -38,8 +37,9 @@ Fig. 1 shows an example interactive dashboard for Video Game Sales from 1994 - 2
 <param name='language' value='en-GB' />
 </object>
 </div>
-<figcaption style="text-align:center; font-style: italic;"> 
-    Fig. 1 Playstation video game sales dashboard (data source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales"> kaggle.com</a>)
+<figcaption style="text-align:center; font-style: italic; margin-top: 20px; margin-bottom: 20px;"> 
+    Fig. 1 Playstation video game sales dashboard (data source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales"> kaggle.com</a>) <br>
+    Clicking the full screen button (bottom right icon) is recommended for smaller displays.
 </figcaption>
 
 <script type='text/javascript'>
@@ -56,8 +56,14 @@ vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
 Creating dashboards like this is really useful for interacting with and investigating data.
 For example, I have designed this dashboard such that the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
-By using this in combination with the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. 
 
-* To do this, filter for "Electronic Arts" in the Publisher drop-down, click on the "PS2" vertical bar in the Sales by Platform chart, and click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
-  After doing so, the Top Video Games horizontal bar chart will show "The Sims" in the top spot, and hovering over it shows the sales information in the pop-up.
+In combination with the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. 
+
+> To do this, 
+>
+> 1. filter for "Electronic Arts" in the Publisher drop-down.
+> 2. click on the "PS2" vertical bar in the Sales by Platform chart.
+> 3. click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
+>  
+> After doing so, the Top Video Games horizontal bar chart will show "The Sims" in the top spot, and hovering over it with the mouse shows the sales information we quoted.
 
