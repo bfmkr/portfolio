@@ -20,7 +20,7 @@ In the [second part](#part2), I give details about the construction of a few dat
 The tools used included Python, Wolfram Mathematica, and Inkscape.
 
 <div style="display:block; margin-left:500">
-<iframe src="{{ "./assets/images/mychart2.html" | prepend: site.baseurl }}" width="100%" height="490px" frameBorder="0"></iframe>
+<iframe src="{{ "/assets/images/mychart2.html" | prepend: site.baseurl }}" width="100%" height="490px" frameBorder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-bottom: 50px;"> 
     Fig. 1. Citation metrics for papers published by Physical Review B in 2019, made with the Python package <a href="https://altair-viz.github.io/index.html">Altair</a>.
