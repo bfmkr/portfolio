@@ -30,7 +30,7 @@ The tools used included Python, Wolfram Mathematica, and Inkscape.
     Highlighted papers cover a sizeable fraction of the top-cited papers.
 </figcaption>
  
-<iframe src="{{ "./assets/images/skyrmion.html" | prepend: site.baseurl }}"  width="100%" height="777px"></iframe>
+<iframe src="{{ "/assets/images/skyrmion.html" | prepend: site.baseurl }}"  width="100%" height="777px"></iframe>
 <figcaption style="font-style:italic; text-align: center;"> 
     Fig. 2. An interactive visualisation of a <a href="https://en.wikipedia.org/wiki/Magnetic_skyrmion" >magnetic skyrmion</a>, made with <a href="https://plotly.com/graphing-libraries/">Plotly</a>, as found in chiral ferromagnetic thin film systems such as a bilayer of PdFe on an Ir(111) single crystal substrate (see for example <a href="http://dx.doi.org/10.1103/PhysRevLett.114.177203">here</a>).
     Cones of unit length represent spins describing the local magnetization field inside a slice of the magnetic material. 
@@ -351,7 +351,7 @@ The subset of highlighted papers also contains many of the most-cited papers.
 This can be seen most directly in the figure at the top of this page (*Fig. 1*), where 11 out of the top 20 papers in 2019 were highlighted by the authors. 
 
 <div>
-    <iframe src="{{ "./assets/images/citations_distribution.html" | prepend: site.baseurl }}" width="100%" height="500px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/citations_distribution.html" | prepend: site.baseurl }}" width="100%" height="500px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-bottom: 50px;"> 
     Fig. 5. Dual y-axis histogram chart for highlighted papers versus non-highlighted papers in 2019 with bin width = 5. <br> 
@@ -386,7 +386,7 @@ Some additional summary statistics extracted using Pandas also support the succe
 We might also be interested in a more granular view of our data, wondering if the editors *always* managed to identify which papers would be received best by the community in a given issue (usually published weekly). *Fig. 6* shows the proportion of citations gained by just the highlighted papers on the left, drilled down across the 48 different issues, with a simple binary colour code to indicate the overall success (or not) of highlighted papers in each issue. 
 
 <div>
-    <iframe src="{{ "./assets/images/proportion_citations_highlighted1.html" | prepend: site.baseurl }}" width="100%" height="410px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/proportion_citations_highlighted1.html" | prepend: site.baseurl }}" width="100%" height="410px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
     Fig. 6. Left: Proportion of citations gained by highlighted papers in each issue. 
@@ -419,7 +419,7 @@ The spread of this measure of success is quite large however, as it ranges from 
 Note that we could have instead decided on classifying the success (or not) of a highlighted paper by its number of citations being within a certain percentile, say within the top 5% of papers, which could impact the exact number of issues that are classed as a success for the editors.
 
 <div>
-    <iframe src="{{ "./assets/images/most-successful-to-least-successful-issues.html" | prepend: site.baseurl }}" width="100%" height="410px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/most-successful-to-least-successful-issues.html" | prepend: site.baseurl }}" width="100%" height="410px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
     Fig. 7. Quantifying the success of highlighted papers in different issues. 
@@ -431,7 +431,7 @@ We can also drill down by section to see if the editors were better at highlight
 This should be taken with a grain of salt however because only 9 papers were highlighted in this section throughout the whole year -- in contrast, the next most successful section for the editors was *Electronic structure and strongly correlated systems* and had 100 highlighted papers.
 
 <div>
-    <iframe src="{{ "./assets/images/proportion_highlighted_by_section.html" | prepend: site.baseurl }}" width="100%" height="380px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/proportion_highlighted_by_section.html" | prepend: site.baseurl }}" width="100%" height="380px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
     Fig. 8. Chart of the percentage of citations earned by just highlighted papers within each section. 
@@ -444,7 +444,7 @@ A comparison of the different sections weighted by the amount of funding/attenti
 
 
 <div>
-    <iframe src="{{ "./assets/images/most_successful_to_least_successful_sections.html" | prepend: site.baseurl }}" width="100%" height="380px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/most_successful_to_least_successful_sections.html" | prepend: site.baseurl }}" width="100%" height="380px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
     Fig. 9. Quantifying the success of highlighted papers within each section. For the simple measure of success, the y-axis shows the difference between the % of citations received by highlighted papers and the % of highlighted papers in that section.
@@ -458,7 +458,7 @@ For fun, since we have already extracted the author names for each publication, 
 *Fig. 10* shows a scatter plot of the number of authors versus the number of citations for each paper, with highlighted papers identified in orange, alongside the distribution of the number of authors.
 
 <div>
-    <iframe src="{{ "./assets/images/citations_vs_num_authors.html" | prepend: site.baseurl }}" width="100%" height="470px" seamless frameborder="0"></iframe>
+    <iframe src="{{ "/assets/images/citations_vs_num_authors.html" | prepend: site.baseurl }}" width="100%" height="470px" seamless frameborder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
     Fig. 10. Left: Number of citations versus number of authors scatter plot. 
