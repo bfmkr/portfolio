@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-embed.has-actions {
+      padding-left: 68px;
+    }
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 15}, "legend": {"labelLimit": 0}}, "data": {"name": "data-3b4aa82a397e6d9112edd705943e3ac2"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "section", "type": "nominal"}, "tooltip": [{"field": "num_highlighted", "type": "quantitative"}, {"field": "num_papers", "type": "quantitative"}, {"field": "prb_citations_high", "type": "quantitative"}, {"field": "prb_citations_nonhigh", "type": "quantitative"}], "x": {"axis": {"labels": false}, "field": "section", "sort": {"field": "measure_of_success", "order": "descending"}, "type": "nominal"}, "y": {"axis": {"format": "%"}, "field": "measure_of_success", "title": "% difference", "type": "quantitative"}}, "title": "Most successful to least successful sections in 2019", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-3b4aa82a397e6d9112edd705943e3ac2": [{"section": "Dynamics, dynamical systems, lattice effects", "num_highlighted": 18, "prb_citations_high": 770, "num_authors_high": 101, "prb_citations_nonhigh": 3644, "num_authors_nonhigh": 917, "cite_ratio": 0.17444494789306753, "num_papers": 219, "mean_citations": 20.15525114155251, "median_citations": 12.0, "mean_over_total": 0.0045662100456621, "measure_of_success": 0.09225316707114972}, {"section": "Electronic structure and strongly correlated systems", "num_highlighted": 100, "prb_citations_high": 3704, "num_authors_high": 421, "prb_citations_nonhigh": 14887, "num_authors_nonhigh": 5537, "cite_ratio": 0.1992361895540853, "num_papers": 1258, "mean_citations": 14.778219395866454, "median_citations": 9.0, "mean_over_total": 0.0007949125596184419, "measure_of_success": 0.11974493359224112}, {"section": "Inhomogeneous, disordered, and partially ordered systems", "num_highlighted": 9, "prb_citations_high": 436, "num_authors_high": 28, "prb_citations_nonhigh": 1446, "num_authors_nonhigh": 405, "cite_ratio": 0.2316684378320935, "num_papers": 117, "mean_citations": 16.085470085470085, "median_citations": 9.0, "mean_over_total": 0.008547008547008546, "measure_of_success": 0.15474536090901658}, {"section": "Magnetism", "num_highlighted": 59, "prb_citations_high": 1728, "num_authors_high": 475, "prb_citations_nonhigh": 10148, "num_authors_nonhigh": 5062, "cite_ratio": 0.14550353654429102, "num_papers": 923, "mean_citations": 12.86673889490791, "median_citations": 9.0, "mean_over_total": 0.0010834236186348862, "measure_of_success": 0.08158154304483273}, {"section": "Semiconductors I: bulk", "num_highlighted": 4, "prb_citations_high": 116, "num_authors_high": 16, "prb_citations_nonhigh": 1242, "num_authors_nonhigh": 492, "cite_ratio": 0.08541973490427099, "num_papers": 102, "mean_citations": 13.313725490196079, "median_citations": 10.5, "mean_over_total": 0.00980392156862745, "measure_of_success": 0.046204048629761185}, {"section": "Semiconductors II: surfaces, interfaces, microstructures, and related topics", "num_highlighted": 13, "prb_citations_high": 184, "num_authors_high": 79, "prb_citations_nonhigh": 2449, "num_authors_nonhigh": 1021, "cite_ratio": 0.06988226357766807, "num_papers": 212, "mean_citations": 12.419811320754716, "median_citations": 8.0, "mean_over_total": 0.0047169811320754715, "measure_of_success": 0.008561508860686934}, {"section": "Structure, structural phase transitions, mechanical properties, defects", "num_highlighted": 9, "prb_citations_high": 334, "num_authors_high": 31, "prb_citations_nonhigh": 3804, "num_authors_nonhigh": 1415, "cite_ratio": 0.08071532141130981, "num_papers": 270, "mean_citations": 15.325925925925926, "median_citations": 10.0, "mean_over_total": 0.003703703703703704, "measure_of_success": 0.04738198807797648}, {"section": "Superfluidity and superconductivity", "num_highlighted": 18, "prb_citations_high": 387, "num_authors_high": 117, "prb_citations_nonhigh": 4735, "num_authors_nonhigh": 2386, "cite_ratio": 0.0755564232721593, "num_papers": 470, "mean_citations": 10.897872340425533, "median_citations": 8.0, "mean_over_total": 0.002127659574468085, "measure_of_success": 0.037258550931733775}, {"section": "Surface physics, nanoscale physics, low-dimensional systems", "num_highlighted": 34, "prb_citations_high": 1038, "num_authors_high": 195, "prb_citations_nonhigh": 11366, "num_authors_nonhigh": 3575, "cite_ratio": 0.08368268300548211, "num_papers": 902, "mean_citations": 13.751662971175167, "median_citations": 9.0, "mean_over_total": 0.0011086474501108647, "measure_of_success": 0.045988669701712705}]}};
+      var embedOpt = {"renderer": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
