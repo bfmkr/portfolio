@@ -49,9 +49,9 @@ PRB's own discussion about the impact of highlighting can be read [here](https:/
 
 To supplement this part of the demo, full details are available in three accompanying Jupyter notebooks:
 
-1. Notebook for [full details on the web scraping.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb)
-2. Notebook for [example usage of the developed Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample%20notebook%20for%20scraping%20publication%20data%20from%20PRB%20in%202019.ipynb)
-3. Notebook for [more data analysis and visualisations](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data%20Analysis%20and%20Visualisations%20PRB%20dataset.ipynb).
+1. Notebook for [full details on the web scraping.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web-scraping-Physical-Review-B-workbook.ipynb)
+2. Notebook for [example usage of the developed Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample-notebook-for-scraping-publication-data-from-PRB-in-2019.ipynb)
+3. Notebook for [more data analysis and visualisations](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data-Analysis-and-Visualisations-PRB-dataset.ipynb).
 
 
 ### Web scraping one issue (99/5) and gathering summary statistics
@@ -87,7 +87,7 @@ From there, the number of citations can be extracted by locating the correct `di
 
 In each weekly issue, the journal also sorts each research paper into different sections in condensed matter physics. 
 It will be useful to additionally locate to which section each research paper belongs in order to compare the different sub-fields to each other. 
-In the full scraping Python code, available [here](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb), I collect this information into a Python dictionary `sections_dict` which contains `{DOI: section}` key-value pairs.
+In the full scraping Python code, available [here](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web-scraping-Physical-Review-B-workbook.ipynb), I collect this information into a Python dictionary `sections_dict` which contains `{DOI: section}` key-value pairs.
 
 Similarly, a Python dictionary `citations_dict` contains the `{DOI: num_citations}` key-value pairs.
 With this minimal information, by loading the data into a Pandas DataFrame we can easily investigate some interesting summary statistics. 
@@ -330,7 +330,7 @@ Due to the asymmetry of the data and the outliers for highly cited papers, using
 ### Extension to all data from 2019
 
 The dataset above for a single issue with just 5 highlighted papers is not large enough to draw any convincing conclusions about the impact of highlighting; here we extend the investigation to all 48 issues from 2019.
-To keep this demo from becoming too long, from now on we will focus on interpreting a sample of data visualisations -- for further Python code details please refer to the [accompanying](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data%20Analysis%20and%20Visualisations%20PRB%20dataset.ipynb) [jupyter](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb) [notebooks](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample%20notebook%20for%20scraping%20publication%20data%20from%20PRB%20in%202019.ipynb).
+To keep this demo from becoming too long, from now on we will focus on interpreting a sample of data visualisations -- for further Python code details please refer to the [accompanying](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data-Analysis-and-Visualisations-PRB-dataset.ipynb) [jupyter](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web-scraping-Physical-Review-B-workbook.ipynb) [notebooks](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample-notebook-for-scraping-publication-data-from-PRB-in-2019.ipynb).
 
 In addition to the fields described previously, for each research paper I have also extracted information for the date of publication, author names, and article name.
 This can be seen in the "Top twenty papers" chart in *Fig. 1* at the top of this webpage where hovering over different horizontal bars displays the metadata for each research paper.
@@ -585,7 +585,7 @@ pl.plot(fig,filename='skyrmion.html',auto_open=False)
 fig.show()
 ```
 
-For full details on the creation of the animations and some further information on the physics, please see the accompanying [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion%20breathing%20animation%20for%20the%20domain%20wall%20ansatz.ipynb).
+For full details on the creation of the animations and some further information on the physics, please see the accompanying [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion-breathing-animation-for-the-domain-wall-ansatz.ipynb).
 To keep the discussion here reasonably short but still self-contained, the following nonlinear dynamical system of equations was numerically solved using Python to produce *Fig. 12*:
 
 <div>
@@ -634,7 +634,7 @@ These are reproduced in *Fig. 13* below.
 
 The damped solution in (b) of *Fig. 13* was solved by numerical integration of Eqs. (1)-(2) in Python and the data was then imported into Mathematica to overlay on top of the energy surface plot. 
 The trajectories in *Fig. 13 (a)* come from analytically derived formulas.
-Full details on the numerical integration in Python for Eqs. (1)-(3) are included in the [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion%20breathing%20animation%20for%20the%20domain%20wall%20ansatz.ipynb) (see section 4).
+Full details on the numerical integration in Python for Eqs. (1)-(3) are included in the [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion-breathing-animation-for-the-domain-wall-ansatz.ipynb) (see section 4).
 
 A further data visualisation I created in the paper to validate our model displayed line plots of the data, *Fig. 14*.
 Here, light blue or pink backgrounds signify in which regime the breathing behaviour occurred (rotational versus oscillatory breathing respectively) for the damped dynamics example, corresponding to the bowl and basin regions in *Fig. 13* above which uses the same colour code.
