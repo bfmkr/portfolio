@@ -58,7 +58,6 @@ To supplement this part of the demo, full details are available in three accompa
 
 For the data collection, I opted to use the Python library [Scrapy](https://scrapy.org/) to crawl through the website of Physical Review B and locate the number of citations for each paper.
 
-
 The basic strategy is as follows: from the web URL for a particular weekly PRB issue, in this case <https://journals.aps.org/prb/issues/99/5#>, the DOIs (digital object identifiers) to collect for different research papers can be found in the `data-id` attribute of `div` tags, as seen by using "Inspect element" in the web browser:
 
 ```html
@@ -264,7 +263,7 @@ The resulting plot is shown in the left panel of *Fig. 3*.
 
 <main style="content: ''; display:table; clear: both;">
   <div style="float: left; width: 45%;">
-    <img src="{{ "./assets/images/histogram_issue_99-5a.png" | prepend: site.baseurl }}" alt="histogram">
+    <img src="{{ "/assets/images/histogram_issue_99-5a.png" | prepend: site.baseurl }}" alt="histogram">
   </div>
   <div style="font-size:9pt; float: left; width: 55%; height:100%; margin-top:130px;">
     <table class="dataframe">
