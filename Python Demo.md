@@ -619,10 +619,10 @@ These are reproduced in *Fig. 13* below.
 
 <main style="content: ''; display:table; clear: both;">
   <div style="float: left; width: 50%;">
-    <img src="{{ "assets/images/energy-landscape.png" | prepend: site.baseurl }}" alt="energy-landscape">
+    <img src="{{ "/assets/images/energy-landscape.png" | prepend: site.baseurl }}" alt="energy-landscape">
   </div>
   <div style="font-size:9pt; float: left; width: 50%; height:100%; margin-top: 50px;">
-        <img src="{{ "assets/images/fig-3-example-orbits.jpg" | prepend: site.baseurl }}" alt="energy-orbits">
+        <img src="{{ "/assets/images/fig-3-example-orbits.jpg" | prepend: site.baseurl }}" alt="energy-orbits">
   </div>
 </main>
 <figcaption style="text-align:center; font-style:italic; margin-top:30px; margin-bottom:30px;"> 
