@@ -7,19 +7,15 @@
 
 &nbsp;
 
-<mark>
-TODO: upload finished notebook to GitHub and nbviewer.
-</mark>
-
 This demo uses Python to showcase some web scraping, data analysis, and data visualisations, e.g. *Figures 1 and 2.* 
 
 In the [first part](#part1), I perform some simple web scraping and statistical analysis to explore the impact of "**Editor's Suggestion**" -- a feature of the world's largest physics journal Physical Review B (PRB) whereby a handful of publications are highlighted out of the 90 or so published each week.
-I have released the tools developed for the web scraping in a dedicated Python package on GitHub [here]().
+<!-- I have released the tools developed for the web scraping in a dedicated Python package on GitHub [here](). -->
 
 In the [second part](#part2), I give details about the construction of a few data visualisations I made for my first scientific paper which was featured in PRB's Editor's Suggestions in 2019.
 The tools used included Python, Wolfram Mathematica, and Inkscape.
 
-<div style="display:block; margin-left:500">
+<div style="display:block;">
 <iframe src="{{ "/assets/images/mychart2.html" | prepend: site.baseurl }}" width="100%" height="490px" frameBorder="0"></iframe>
 </div>
 <figcaption style="font-style:italic; text-align: center; margin-bottom: 50px;"> 
@@ -30,9 +26,9 @@ The tools used included Python, Wolfram Mathematica, and Inkscape.
     Highlighted papers cover a sizeable fraction of the top-cited papers.
 </figcaption>
  
-<iframe src="{{ "/assets/images/skyrmion.html" | prepend: site.baseurl }}"  width="100%" height="777px"></iframe>
+<iframe src="{{ "/assets/images/skyrmion.html" | prepend: site.baseurl }}"  width="100%" height="610px"></iframe>
 <figcaption style="font-style:italic; text-align: center;"> 
-    Fig. 2. An interactive visualisation of a <a href="https://en.wikipedia.org/wiki/Magnetic_skyrmion" >magnetic skyrmion</a>, made with <a href="https://plotly.com/graphing-libraries/">Plotly</a>, as found in chiral ferromagnetic thin film systems such as a bilayer of PdFe on an Ir(111) single crystal substrate (see for example <a href="http://dx.doi.org/10.1103/PhysRevLett.114.177203">here</a>).
+    Fig. 2. An interactive visualisation of a <a href="https://en.wikipedia.org/wiki/Magnetic_skyrmion" >magnetic skyrmion</a>, made with the <a href="https://plotly.com/graphing-libraries/">Plotly</a> Python library, as found in chiral ferromagnetic thin film systems such as a bilayer of PdFe on an Ir(111) single crystal substrate (see for example <a href="http://dx.doi.org/10.1103/PhysRevLett.114.177203">here</a>).
     Cones of unit length represent spins describing the local magnetization field inside a slice of the magnetic material. 
     An extended core of spins point downwards in the center of the skyrmion. 
     Extending radially outwards from there, the spins continuously rotate until all are pointing upwards far away from the core, where the material is uniformly magnetized.
@@ -50,7 +46,12 @@ The tools used included Python, Wolfram Mathematica, and Inkscape.
 
 Many scientific publishers have adopted a *highlights* feature for papers which are deemed to be of higher quality than most, or are otherwise considered to be influential.
 PRB's own discussion about the impact of highlighting can be read [here](https://journals.aps.org/prb/edannounce/PhysRevB.92.210001). 
-Accompanying [jupyter]() [notebooks]() for this part of the demo are available in the GitHub repository for this website, which can also be opened in nbviewer [here](). 
+
+To supplement this part of the demo, full details are available in three accompanying Jupyter notebooks:
+
+1. Notebook for [full details on the web scraping.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb)
+2. Notebook for [example usage of the developed Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample%20notebook%20for%20scraping%20publication%20data%20from%20PRB%20in%202019.ipynb)
+3. Notebook for [more data analysis and visualisations](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data%20Analysis%20and%20Visualisations%20PRB%20dataset.ipynb).
 
 
 ### Web scraping one issue (99/5) and gathering summary statistics
@@ -87,7 +88,7 @@ From there, the number of citations can be extracted by locating the correct `di
 
 In each weekly issue, the journal also sorts each research paper into different sections in condensed matter physics. 
 It will be useful to additionally locate to which section each research paper belongs in order to compare the different sub-fields to each other. 
-In the full scraping Python code, available [here](), I collect this information into a Python dictionary `sections_dict` which contains `{DOI: section}` key-value pairs.
+In the full scraping Python code, available [here](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb), I collect this information into a Python dictionary `sections_dict` which contains `{DOI: section}` key-value pairs.
 
 Similarly, a Python dictionary `citations_dict` contains the `{DOI: num_citations}` key-value pairs.
 With this minimal information, by loading the data into a Pandas DataFrame we can easily investigate some interesting summary statistics. 
@@ -311,7 +312,7 @@ The resulting plot is shown in the left panel of *Fig. 3*.
   </div>
 </main>
 
-<figcaption style="text-align:center; font-style:italic; margin-top:10px; margin-bottom:20px;">
+<figcaption style="text-align:center; font-style:italic; margin-top:30px; margin-bottom:50px;">
     Fig. 3. Left: As to be expected, the distribution of citation counts is not symmetrical; most papers receive between 1 and 20 citations, and there are also a few outliers for highly cited papers.
     Right: Data for just the highlighted articles via <code style="font-style:normal;">df[df["is_highlighted"]]</code>. 
     A cursory look at the histogram shows that the highlighted articles aren't necessarily the most highly cited ones -- while the second-most cited paper with 75 citations was highlighted, the top cited one has 80 citations and was not highlighted.
@@ -330,11 +331,11 @@ Due to the asymmetry of the data and the outliers for highly cited papers, using
 ### Extension to all data from 2019
 
 The dataset above for a single issue with just 5 highlighted papers is not large enough to draw any convincing conclusions about the impact of highlighting; here we extend the investigation to all 48 issues from 2019.
-To keep this demo from becoming too long, from now on we will focus on interpreting a sample of data visualisations -- for further Python code details please refer to the [accompanying]() [jupyter]() [notebooks](). 
+To keep this demo from becoming too long, from now on we will focus on interpreting a sample of data visualisations -- for further Python code details please refer to the [accompanying](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data%20Analysis%20and%20Visualisations%20PRB%20dataset.ipynb) [jupyter](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web%20scraping%20Physical%20Review%20B%20workbook.ipynb) [notebooks](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample%20notebook%20for%20scraping%20publication%20data%20from%20PRB%20in%202019.ipynb).
 
 In addition to the fields described previously, for each research paper I have also extracted information for the date of publication, author names, and article name.
 This can be seen in the "Top twenty papers" chart in *Fig. 1* at the top of this webpage where hovering over different horizontal bars displays the metadata for each research paper.
-The full dataset with citation numbers collected on 25 Aug 2023 is available for download [here]().
+The full dataset with citation numbers collected on 25 Aug 2023 is available for download [here](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/data/data_2023-08-25.csv).
 
 PRB themselves investigated the number of citations accumulated by papers over the previous 2 years, for different years from 2009-2014, and compared the results for highlighted papers to non-highlighted ones, *Fig. 4.*
 
@@ -460,7 +461,7 @@ For fun, since we have already extracted the author names for each publication, 
 <div>
     <iframe src="{{ "/assets/images/citations_vs_num_authors.html" | prepend: site.baseurl }}" width="100%" height="470px" seamless frameborder="0"></iframe>
 </div>
-<figcaption style="font-style:italic; text-align: center; margin-top: 10px; margin-bottom: 50px;"> 
+<figcaption style="font-style:italic; text-align: center; margin-bottom: 50px;"> 
     Fig. 10. Left: Number of citations versus number of authors scatter plot. 
     Hovering over individual points with the cursor displays metadata for the individual research papers.
     Zoom in on individual points by using the mouse wheel and clicking and dragging the canvas.
@@ -565,7 +566,7 @@ conedata = [calc_conefield2D(x,y) for x in np.arange(-25,25,3) for y in np.arang
 
 layout = go.Layout(
     width=1250,
-    height=758,
+    height=650,
     autosize=False,
     scene=dict(
         camera=dict(eye=dict(x=0.55,y=0.90,z=0.90)), # adjust norm of `eye` to zoom
@@ -577,7 +578,7 @@ layout = go.Layout(
 
 fig = go.Figure(data=conedata, layout=layout)
 fig.update_layout(
-    title='<b>Interactive magnetic skyrmion visualization made with Plotly</b>',
+    title='<b>Interactive magnetic skyrmion visualisation made with Plotly</b>',
     title_x=0.5
 )
 
@@ -585,7 +586,7 @@ pl.plot(fig,filename='skyrmion.html',auto_open=False)
 fig.show()
 ```
 
-For full details on the creation of the animations and some further information on the physics, please see the accompanying [jupyter notebook]().
+For full details on the creation of the animations and some further information on the physics, please see the accompanying [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion%20breathing%20animation%20for%20the%20domain%20wall%20ansatz.ipynb).
 To keep the discussion here reasonably short but still self-contained, the following nonlinear dynamical system of equations was numerically solved using Python to produce *Fig. 12*:
 
 <div>
@@ -634,7 +635,7 @@ These are reproduced in *Fig. 13* below.
 
 The damped solution in (b) of *Fig. 13* was solved by numerical integration of Eqs. (1)-(2) in Python and the data was then imported into Mathematica to overlay on top of the energy surface plot. 
 The trajectories in *Fig. 13 (a)* come from analytically derived formulas.
-Full details on the numerical integration in Python for Eqs. (1)-(3) are included in the [jupyter notebook]() (see section 4).
+Full details on the numerical integration in Python for Eqs. (1)-(3) are included in the [jupyter notebook](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Skyrmion%20breathing%20animation%20for%20the%20domain%20wall%20ansatz.ipynb) (see section 4).
 
 A further data visualisation I created in the paper to validate our model displayed line plots of the data, *Fig. 14*.
 Here, light blue or pink backgrounds signify in which regime the breathing behaviour occurred (rotational versus oscillatory breathing respectively) for the damped dynamics example, corresponding to the bowl and basin regions in *Fig. 13* above which uses the same colour code.
