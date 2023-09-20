@@ -10,7 +10,7 @@
 This demo uses Python to showcase some web scraping, data analysis, and data visualisations, e.g. *Figures 1 and 2.* 
 
 In the [first part](#part1), I perform some simple web scraping and statistical analysis to explore the impact of "**Editor's Suggestion**" -- a feature of the world's largest physics journal Physical Review B (PRB) whereby a handful of publications are highlighted out of the 90 or so published each week.
-<!-- I have released the tools developed for the web scraping in a dedicated Python package on GitHub [here](). -->
+The tools developed for the web scraping are in a Python package on GitHub [here](https://github.com/bfmkr/portfolio/tree/main/assets/notebooks/scrape).
 
 In the [second part](#part2), I give details about the construction of a few data visualisations I made for my first scientific paper which was featured in PRB's Editor's Suggestions in 2019.
 The tools used included Python, Wolfram Mathematica, and Inkscape.
@@ -51,7 +51,7 @@ To supplement this part of the demo, full details are available in three accompa
 
 1. Notebook for [full details on the web scraping.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web-scraping-Physical-Review-B-workbook.ipynb)
 2. Notebook for [example usage of the developed Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample-notebook-for-scraping-publication-data-from-PRB-in-2019.ipynb)
-3. Notebook for [more data analysis and visualisations](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data-Analysis-and-Visualisations-PRB-dataset.ipynb).
+3. Notebook for [more data analysis and visualisations.](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data-Analysis-and-Visualisations-PRB-dataset.ipynb)
 
 
 ### Web scraping one issue (99/5) and gathering summary statistics
