@@ -58,7 +58,7 @@ To supplement this part of the demo, full details are available in three accompa
 
 For the data collection, I opted to use the Python library [Scrapy](https://scrapy.org/) to crawl through the website of Physical Review B and locate the number of citations for each paper.
 
-The basic strategy is as follows: from the web URL for a particular weekly PRB issue, in this case <https://journals.aps.org/prb/issues/99/5#>, the DOIs (digital object identifiers) to collect for different research papers can be found in the `data-id` attribute of `div` tags, as seen by using "Inspect element" in the web browser:
+The basic strategy is as follows: from the web URL for a particular weekly PRB issue, in this case <https://journals.aps.org/prb/issues/99/5>, the DOIs (digital object identifiers) to collect for different research papers can be found in the `data-id` attribute of `div` tags, as seen by using "Inspect element" in the web browser:
 
 ```html
 <div class="content">
