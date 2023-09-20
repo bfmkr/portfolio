@@ -42,6 +42,22 @@ This demo contains an example Tableau Dashboard displaying video game sales whic
     Clicking the full screen button (bottom right icon) is recommended for smaller displays.
 </figcaption>
 
+
+Creating dashboards like this is useful for interacting with and investigating data.
+In this example dashboard, the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them, which changes the contents of the other charts.
+
+
+### Example 
+
+For example, by using the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. To verify this:
+
+1. Filter for "Electronic Arts" by using the Publisher drop-down.
+2. Click on the "PS2" vertical bar in the Sales by Platform chart.
+3. Click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
+
+After doing so, the **Top Video Games** horizontal bar chart will show "The Sims" in the top spot, and hovering over it with the mouse shows the sales information we quoted.
+
+
 <script type='text/javascript'>
 var divElement = document.getElementById('viz1684839151419');
 var vizElement = divElement.getElementsByTagName('object')[0];
@@ -52,18 +68,3 @@ var scriptElement = document.createElement('script');
 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-
-
-Creating dashboards like this is really useful for interacting with and investigating data.
-For example, I have designed this dashboard such that the **Sales by Genre** tree map (bottom right) and **Sales by Platform** bar chart (top right) can be activated as filters by clicking on them. 
-
-In combination with the **Publisher** drop-down menu, we can quickly discover that the top selling video game published by Electronic Arts in the Simulation genre for the PS2 console was "The Sims" with 2.77 million global sales in 2003. 
-
-> To do this, 
->
-> 1. filter for "Electronic Arts" in the Publisher drop-down.
-> 2. click on the "PS2" vertical bar in the Sales by Platform chart.
-> 3. click on the "Simulation" area (coloured teal) in the Sales by Genre tree map.
->  
-> After doing so, the Top Video Games horizontal bar chart will show "The Sims" in the top spot, and hovering over it with the mouse shows the sales information we quoted.
-
