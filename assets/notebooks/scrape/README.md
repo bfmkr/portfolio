@@ -42,9 +42,10 @@ outfile = 'citations_issue_99_5.csv'
 df = get_citation_data(infile=infile,outfile=outfile,journal='prb')
 ```
 
-## Data fields collected
+The function `get_citation_data` scrapes and caches citation numbers given an input CSV file where the 0th column contains DOIs of research papers.
 
-The function `get_issue_data` scrapes and caches the following metadata from research papers from issue URLs (e.g. <https://journals.aps.org/prb/issues/99/1>):
+
+## Data fields collected
 
 * DOI (digital object identifier)
 * section
@@ -53,13 +54,12 @@ The function `get_issue_data` scrapes and caches the following metadata from res
 * authors
 * name
 * is_highlighted
-
-The function `get_citation_data` scrapes and caches citation numbers given a CSV file where the 0th column contains DOIs of research papers.
+* {journal}_citations (where {journal} is one of {prl, prx, prb, etc.}. See <https://journals.aps.org/> for a full list.)
 
 
 ## Sample Jupyter notebooks
 
 1. Notebook for [step-by-step details on the web scraping.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Web-scraping-Physical-Review-B-workbook.ipynb)
-2. Notebook for [further usage of the Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample-notebook-for-scraping-publication-data-from-PRB-in-2019.ipynb)
+2. Notebook for [further example usage of the Python package.](https://github.com/bfmkr/portfolio/blob/main/assets/notebooks/Sample-notebook-for-scraping-publication-data-from-PRB-in-2019.ipynb)
 3. Notebook for [data analysis and visualisations.](https://nbviewer.org/github/bfmkr/portfolio/blob/main/assets/notebooks/Data-Analysis-and-Visualisations-PRB-dataset.ipynb)
 
