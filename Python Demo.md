@@ -376,8 +376,8 @@ Some additional summary statistics extracted using Pandas also support the succe
 
 <div>
   \begin{align}
-  \text{mean(just highlighted papers)} &= 32.9 \text{ citations} \notag \\
-  \text{mean(all papers in dataset)} &= 14.0 \text{ citations} \notag \\
+  \text{mean(just highlighted papers)} &= 32.94 \text{ citations} \notag \\
+  \text{mean(all papers in dataset)} &= 13.95 \text{ citations} \notag \\
   \text{median(just highlighted papers)} &= 19.0 \text{ citations} \notag \\
   \text{median(all papers in dataset)} &= 9.0 \text{ citations} \notag 
   \end{align}
@@ -387,14 +387,14 @@ We can also calculate a simple conditional probability to demonstrate the succes
 
 <div>
   \begin{align}
-  P(\text{paper has } > 14.0 \text{ citations | } \text{paper is highlighted}) 
-    &= \frac{\text{count(highlighted papers with > 14.0 citations)}}{\text{count(highlighted papers)}} 
-     = \frac{153}{264} 
-     = 57.95 \% \notag
+  P(\text{paper has } > 13.95 \text{ citations | } \text{paper is highlighted}) 
+    &= \frac{\text{count(highlighted papers with > 13.95 citations)}}{\text{count(highlighted papers)}} 
+     = \frac{162}{264} 
+     = 61.36 \% \notag
   \end{align}
 </div>
 
-In plain English, this means we can expect that new papers highlighted by the editors will receive a greater than average number of citations around 58% of the time.
+In plain English, this means we can expect that new papers highlighted by the editors will receive a greater than average number of citations around 61% of the time.
 
 We might also be interested in a more granular view of our data, wondering if the editors *always* managed to identify which papers would be received best by the community in a given issue (usually published weekly). *Fig. 6* shows the proportion of citations gained by just the highlighted papers on the left, drilled down across the 48 different issues, with a simple binary colour code to indicate the overall success (or not) of highlighted papers in each issue. 
 
