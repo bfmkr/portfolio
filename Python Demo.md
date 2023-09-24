@@ -519,7 +519,7 @@ In this part, I wish to write a few details about the construction of a few of t
 
 The main problem we addressed in our manuscript involved an excitation of [magnetic skyrmions](https://en.wikipedia.org/wiki/Magnetic_skyrmion) known as their "breathing" dynamics.
 This is where the skyrmion -- a cylindrically-shaped deformation in the magnetization field of a ferromagnet that is otherwise uniformly magnetized, *see Fig. 2* -- appears to grow and shrink in size. 
-This was first predicted by [eigenmode studies](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.024415) of the magnetization dynamics (though it is an intrinsically non-linear phenomenon), and it was later [experimentally measured](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.109.037603) in the skyrmion crystal phase of the helimagnetic insulator Cu2SeO3 where a periodic arrangement of skyrmions breathes coherently.
+This was first predicted by [eigenmode studies](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.024415) of the magnetization dynamics (though it is an intrinsically non-linear phenomenon), and it was later [experimentally measured](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.109.037603) in the skyrmion crystal phase of the helimagnetic insulator Cu\\(_2\\)OSeO\\(_3\\) where a periodic arrangement of skyrmions breathes coherently.
 Our paper focused on capturing an effective model for the non-linear breathing of a single *isolated* skyrmion within the ferromagnetic phase of chiral magnets.
 
 During the breathing dynamics, the skyrmion retains its hallmark circular shape during the motion; and, at the same time, the magnetic spins comprising the skyrmion collectively precess around their equilibrium (at-rest) values.
