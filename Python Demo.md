@@ -426,7 +426,7 @@ Further summary statistics of note for highlighted papers grouped by issue are a
 
 This shows that the editors do not simply always pick the same number of articles to highlight each week, but instead likely select articles according to a mixture of criteria such as feedback from peer review.
 
-For a variation on the information contained in *Fig. 6*, *Fig. 7* sorts the issues from most successful to least successful regarding the impact of highlighting papers in Editor's Suggestion. Here, the success of highlighted papers within an issue is quantified comparing the percentage of citations received by highlighted papers to the proportion of highlighted papers within that issue. 
+For a variation on the information contained in *Fig. 6*, *Fig. 7* sorts the issues from most successful to least successful regarding the impact of highlighting papers in Editor's Suggestion. Here, the success of highlighted papers within an issue is quantified by comparing the percentage of citations received by highlighted papers to the proportion of highlighted papers within that issue. 
 It turns out that the editors were successful 39/48 = 81.25% of the time using this rather simple/generous measure of success. 
 The spread of this measure of success is quite large however, as it ranges from +26.5% to -1.5%.
 
