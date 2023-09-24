@@ -12,7 +12,7 @@ This demo uses Python to showcase some web scraping, data analysis, and data vis
 In the [first part](#part1), I perform some simple web scraping and statistical analysis to explore the impact of "**Editor's Suggestion**" -- a feature of the world's largest physics journal Physical Review B (PRB) whereby a handful of publications are highlighted out of the 90 or so published each week.
 The tools developed for the web scraping are in a Python package on GitHub [here](https://github.com/bfmkr/portfolio/tree/main/assets/notebooks/scrape).
 
-In the [second part](#part2), I give details about the construction of a few data visualisations I made for my first scientific paper which was featured in PRB's Editor's Suggestions in 2019.
+In the [second part](#part2), I give details about the construction of a few data visualisations I made for my first scientific paper which was featured in PRB's Editor's Suggestion in 2019.
 The tools used included Python, Wolfram Mathematica, and Inkscape.
 
 <div style="display:block;">
@@ -368,7 +368,7 @@ It is also notable that highlighted papers have a significantly larger standard 
   \end{align}
 </div>
 
-Technically speaking, the difference in spread of citations suggests also that highlighted papers are not a good representative sample of the full dataset.
+Technically speaking, the difference in spread of citations demonstrates that highlighted papers are not a good representative sample of the full dataset.
 To be more precise, highlighted papers account for 264/4473 = 5.9% of all published research papers in 2019, while their share of the total number of citations is greater than this at 13.9%. 
 We can therefore broadly say that Editor's Suggestion is a successful feature, because highlighted papers in aggregate account for more than their share of citations.
 
@@ -409,7 +409,8 @@ We might also be interested in a more granular view of our data, wondering if th
     Double-click on the chart to reset to the initial state.
 </figcaption>
 
-To explain the `editor_success` colour code, for example, 4 out of 87 papers were highlighted in issue 99/1, which is smaller than the value of 6.1% which is the proportion of citations earned by those papers. Hence highlighted papers earned more than their share of citations in this issue which means `editor_success = True`. 
+To explain the `editor_success` colour code, consider an example:  in issue 99/1, the left-most vertical bar in *Fig. 6*, 4 out of 87 papers were highlighted, which is smaller than the proportion of citations earned by those papers (6.1%). 
+Hence highlighted papers earned more than their share of citations in this issue which means `editor_success = True`. 
 On the right of *Fig. 6*, we can see the distribution of the same data to the left. 
 From this view of the data, we can see that 7 issues had highlighted papers accounting for between 8-10% of total citations which is the modal value for the 2%  bin width.
 
@@ -481,7 +482,7 @@ For fun, since we have already extracted the author names for each publication, 
 </figcaption>
 
 The scatter plot in *Fig. 10 (left)* shows there is a cluster of 5 highest cited papers above 200 citations, all of which are highlighted articles, which had between 2 and 7 authors. 
-We can also see that no papers have >100 citations when the number of authors exceeds 7. Moreover, the extended tail to the right suggests that as the number of authors increases further than 7, the impact of a paper appears to decrease.
+We can also see that no papers have >100 citations when the number of authors exceeds 7. Moreover, the extended tail to the right suggests that as the number of authors increases further than 7, the impact of research papers appears to decrease in aggregate.
 
 
 ### Conclusions
@@ -489,8 +490,9 @@ We can also see that no papers have >100 citations when the number of authors ex
 In this demo we scraped data for all publications in Physical Review B from 2019 to address the impact of highlighting papers in "Editor's Suggestion". 
 By investigating the data collected, we found:
 
-* The editors managed to identify papers with higher than average impact around 80% of the time.
-* Within a given weekly issue, highlighted papers account for a typical (modal) value of between 8-10% of the total share of citations (*Fig. 6*, right), while they only account on average for 5.5% of the papers published.
+* The probability of a paper having more than  the average number of citations, given that it is highlighted by the editors, is approximately 61%.
+* From issue to issue, the editors managed to identify papers to highlight in Editor's Suggestion with higher than average impact around 80% of the time.
+* From issue to issue, highlighted papers account for a typical (modal) value of between 8-10% of the total share of citations (*Fig. 6*, right), while they only account on average for 5.5% of the papers published.
 * The most successful sections for the editors selecting papers to highlight were *Inhomogeneous, disordered, and partially ordered systems* followed by *Electronic structure and strongly correlated systems.*
 * The majority of research papers had 3 authors, and as the number of authors continues to increase beyond 7 the impact of research papers decreases in aggregate.
 
