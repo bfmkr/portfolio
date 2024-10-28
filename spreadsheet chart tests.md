@@ -7,7 +7,7 @@
 
 &nbsp;
 
-Interactive charts embedded on websites from Google Sheets which use more than 1 data series are not loading currently because something broke on the server side in the javascript. Below is a minimal working example to show the bug. The second chart should show both sin(x) and cos(x) on the same chart. The example spreadsheet can be seen [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vQzOEaCipHHtdjkzqHbAmBt5sgVEoC6rOU7dsecO3Khc6O3I1mgg50q8I3BQo22xJqz6RXjiujLXlAY/pubhtml).
+Interactive charts embedded on websites from Google Sheets which use more than 1 data series are not loading currently because something broke on the server side in the javascript. Below is a minimal working example to show the bug. The second chart should show both sin(x) and cos(x) on the same chart. The example spreadsheet can be seen [here](https://docs.google.com/spreadsheets/d/1k8B2-aqyXS1iJO-3VLbOxY-iWadtHgcc1UXWwRp3DyU/edit?gid=0#gid=0).
 
 ## Chart with one set of x-y pairs (works)
 
