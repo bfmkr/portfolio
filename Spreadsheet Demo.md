@@ -7,17 +7,25 @@
 
 &nbsp;
 
-In this demo I investigate the monthly prices of a fictional stock ABC over a 3 year period, calculate simple risk and reward metrics, compare the distribution of returns to a theoretical Gaussian model, and compare the performance to the US market index as a benchmark over the same period.
-The full details are available to view and download [here](https://docs.google.com/spreadsheets/d/1siknL7tF3BhBewxQRVH1tyg2vGfkvemDQxeHJDNO5k0/edit?usp=sharing).
+**Update 28/10/2024:**  interactive charts which use more than 1 data series are currently not loading correctly because something broke in the last few days server-side in google sheets, see e.g. <a href="{{ "/spreadsheet%20chart%20tests.html" | prepend: site.baseurl }}">test charts</a>. When this issue is fixed I will revert to the interactive charts used formerly in this demo.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubhtml?gid=558173804&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="620"></iframe>
+----
+
+&nbsp;
+
+In this demo I investigate the monthly prices of a fictional stock ABC over a 3 year period, calculate simple risk and reward metrics, compare the distribution of returns to a theoretical Gaussian model, and compare the performance to the US market index as a benchmark over the same period.
+<!-- The full details are available to view and download [here](https://docs.google.com/spreadsheets/d/1siknL7tF3BhBewxQRVH1tyg2vGfkvemDQxeHJDNO5k0/edit?usp=sharing). -->
+
+<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubhtml?gid=558173804&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="620"></iframe> -->
+<span style="display:block; width: 100%; margin-left:auto; margin-right:auto;">
+    ![raw-data](assets/images/spreadsheet-dashboard.png)
+</span>
 <figcaption style="text-align: center; font-style: italic;">
     Fig. 1 Financial Analytics Dashboard for the fictional stock ABC. 
-    For the best viewing experience, open the full spreadsheet workbook <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubhtml" title="Financial analytics spreadsheet demo"> here</a> in a new tab.
+    <!-- The full spreadsheet workbook can be opened <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubhtml" title="Financial analytics spreadsheet demo"> here</a> in a new tab. -->
 </figcaption>
 
-All figures in this demo are interactive versions of the graphs in the spreadsheet. 
-In other words, hovering your mouse cursor over the plots can display further information about the underlying data.
+<!-- All data visualizations in this demo are *interactive* -- hovering your mouse cursor over the plots can display further information about the underlying data. -->
 
 
 ## The data
@@ -39,7 +47,7 @@ The simplest thing we can do with the raw data is probably a line chart of the m
 There is an upward trend from the lowest price, $43.63, recorded on 2015-08-31, to the high price, $59.89, recorded on 2016-09-31.
 
 <div style="text-align: center;">
-<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=1909742734&amp;format=interactive"></iframe>
+<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=1909742734&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align:center; font-style: italic;">
     Fig. 2 Line chart of historical prices for the stock ABC
@@ -50,7 +58,7 @@ Plotting this gives us a quick way to see if there was any particular time of ye
 To generate this plot the **% monthly returns** were computed in a standard way (described in the next paragraph), and the built-in functions `COUNTIFS()` and `MONTH()` were used to find the total positive and negative returns from the 3 years of data.
 
 <div style="text-align: center;">
-<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=499677409&amp;format=interactive"></iframe>
+<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=499677409&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align:center; font-style: italic;">
     Fig. 3 November appears to be a good time of year
@@ -86,7 +94,7 @@ The cumulative wealth for the stock ABC given an initial \\(C = \$ 100.00 \\) is
 At the end of 2017, the final wealth is $110.05 for ABC and $96.71 for the benchmark.
 
 <div style="text-align: center;">
-<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=1610569546&amp;format=interactive"></iframe>
+<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=1610569546&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align: center; font-style: italic;">
      Fig. 4 The benchmark outperformed the stock until Q1 of 2016. <br>
@@ -129,7 +137,7 @@ The result is
 which indicates there is a 5% chance of losing more than 6.85% per month.
 
 <div style="text-align: center;">
-    <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=778486573&amp;format=interactive"></iframe>
+    <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=778486573&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align:center; font-style:italic;">
     Fig. 5 The 5% VaR corresponds to the height of the dashed line; 5% of the returns fall below this value.
@@ -165,7 +173,7 @@ which confirms that not only did ABC outperform the benchmark, but also that inv
 
 
 A second risk-adjusted metric is the **Sortino ratio**, which, unlike the Sharpe ratio, takes into account that large "volatility" *above* the average of historical returns is actually *good* for investors. 
-Therefore we can argue that only below-average returns should be used to measure volatility, and for this reason, the Sortino ratio is the excess reward divided by the standard deviation of just the below-average returns (the semideviation \\(\sigma_{\text{smd}}\\)).
+Therefore we can argue that only below-average returns should be used to measure volatility, and for this reason, the Sortino ratio is the excess reward divided by the the semideviation \\(\sigma_{\text{smd}}\\), which is the standard deviation of just the below-average returns.
 
 <div>
 \begin{align}
@@ -188,7 +196,7 @@ A simple histogram with 30 bins for the 60 empirical % monthly returns is plotte
 Details of the histogram construction are available in the tab "Histogram details" in the spreadsheet.
 
 <div style="text-align: center;">
-   <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=32545108&amp;format=interactive"></iframe> 
+   <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=32545108&amp;format=image"></iframe> 
 </div>
 <figcaption style="text-align:center; font-style:italic;">
     Fig. 6 Histogram comparison for the empirical series of historical returns and a theoretical Gaussian distribution with the same mean and standard deviation.
@@ -228,7 +236,7 @@ The drawdown at a given date is defined as the current price divided by the hist
 Competitors with similar cumulative wealth performance can be distinguished by their maximum drawdown, usually quoted as a positive %.
 
 <div style="text-align: center;">
-    <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=881907583&amp;format=interactive"></iframe>
+    <iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=881907583&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align:center; font-style:italic;">
   Fig. 7 Drawdown comparison for the series of historical returns compared to the benchmark. <br>
@@ -246,7 +254,7 @@ The benchmark suffered a maximum drawdown of almost 50%, which is dangerous for 
 
 ABC therefore tremendously outperformed its benchmark according to this metric.
 
-We can also investigate the **correlation** between stock ABC and the market index benchmark, which, roughly speaking, allows us to answer questions like "What happened to stock ABC when the US market increased?", and also allow us to investigate patterns in their co-movement.
+We can also investigate the **correlation** between stock ABC and the market index benchmark, which, roughly speaking, allows us to answer questions like "What happened to stock ABC when the US market increased?", and also allows us to investigate patterns in their co-movement.
 We do this by calculating the Pearson correlation coefficient with `PEARSON()` or `CORREL()` in the spreadsheet. 
 This is a number between -1 and 1: a value of 1 indicates the returns are perfectly correlated, always moving in the same direction; a value of -1 indicates perfect anti-correlation, always moving in different directions; and a value of zero indicates no relationship between the movements.
 Using all of the available data, we find
@@ -262,7 +270,7 @@ This can be investigated with a rolling window analysis of the correlation coeff
 In this case, it shows us that the correlation is unstable.
 
 <div style="text-align: center;">
-<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=997584650&amp;format=interactive"></iframe>
+<iframe width="506" height="313" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGCOtI0NUWpgbHzTx1VXQdDCAQaImQRU9JR9SoJnaRovRmytICbSMLqSJkPJd2IzivHEML0-tHsq27/pubchart?oid=997584650&amp;format=image"></iframe>
 </div>
 <figcaption style="text-align:center; font-style:italic;">
   Fig. 8 Rolling correlation: the correlation coefficient for overlapping 1 year sub-periods of the data. <br>
